@@ -1,0 +1,23 @@
+{
+  "name": "fetch-wrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Genesys225/fetchWrapper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Genesys225/fetchWrapper/issues"
+  },
+  "homepage": "https://github.com/Genesys225/fetchWrapper#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "xmldom": "^0.4.0"
+  }
+}
