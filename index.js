@@ -2,10 +2,12 @@ const { SOAPClient } = require('./lib/soap-client');
 const { RestClient, rest } = require('./lib/rest-client');
 const { FetchWrap } = require('./lib/fetchWrapper');
 async function run() {
-	const res = await new SOAPClient(
+	const res = new SOAPClient(
 		'https://www.crcind.com/csp/samples/SOAP.Demo.CLS'
-	).get('?WSDL=1');
-	console.log(res.definitions.types['s:schema']['s:element']);
+	);
+	const json = await res.get('?WSDL=1');
+	const Json2Xml = new res.Json2Xml(json);
+	console.log(Json2Xml.xmlDoc.lastChild.childNodes);
 }
 run();
 
