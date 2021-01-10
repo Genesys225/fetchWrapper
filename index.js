@@ -7,7 +7,7 @@ async function run() {
 	);
 	const json = await res.get('?WSDL=1');
 	const Json2Xml = new res.Json2Xml(json);
-	console.log(Json2Xml.xmlDoc.lastChild.childNodes);
+	console.log(res.serializer.serializeToString(Json2Xml.xmlDoc));
 }
 run();
 
